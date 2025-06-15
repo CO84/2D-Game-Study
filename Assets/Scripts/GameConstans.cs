@@ -22,6 +22,7 @@ public static class GameConstans
     public const string EnemyMoveState = "move";
     public const string EnemyAttackState = "attack";
     public const string EnemyBattleState = "battle";
+    public const string EnemyDeadState = "empty";
     public const string MoveAnimSpeedMultiplier = "moveAnimSpeedMultiplier";
     public const string BattleAnimSpeedMultiplier = "battleAnimSpeedMultiplier";
 

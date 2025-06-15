@@ -6,6 +6,7 @@ public class Enemy : Entity
     public Enemy_MoveState moveState;
     public Enemy_AttackState attackState;
     public Enemy_BattleState battleState;
+    public Enemy_DeadState deadState;
 
     [Header("Battle Details")]
     public float battleMoveSpeed = 3f;
@@ -25,7 +26,13 @@ public class Enemy : Entity
     [SerializeField] private Transform playerCheck;
     [SerializeField] private float playerCheckDistance = 10;
 
-    public Transform player { get; private set; } 
+    public Transform player { get; private set; }
+
+    public override void EntityDeath()
+    {
+        base.EntityDeath();
+        StateMachine.ChangeState(deadState);
+    }
 
     public void TryToEnterBattleState(Transform player)
     {

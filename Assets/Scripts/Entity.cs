@@ -50,6 +50,11 @@ public class Entity : MonoBehaviour
         StateMachine.UpdateActiveState();
     }
 
+    public virtual void EntityDeath()
+    {
+
+    }
+
     public void ReciveKnockback(Vector2 knockback, float duration)
     {
         if (knockbackCoroutine is not null)

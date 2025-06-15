@@ -10,6 +10,7 @@ public class EnemeySkeleton : Enemy
         moveState = new Enemy_MoveState(StateMachine, GameConstans.EnemyMoveState, this);
         attackState = new Enemy_AttackState(StateMachine, GameConstans.EnemyAttackState, this);
         battleState = new Enemy_BattleState(StateMachine, GameConstans.EnemyBattleState, this);
+        deadState = new Enemy_DeadState(StateMachine, GameConstans.EnemyIdleState, this);
     }
 
     protected override void Start()
